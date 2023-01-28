@@ -83,7 +83,7 @@ modal.addEventListener("click", (e)=>{
 window.onscroll = function() {scroll()};
 
 function scroll() {
-  if (document.documentElement.scrollTop > 3723) {
+  if (document.documentElement.scrollTop > 3520) {
     openModal()
   }
 }
@@ -92,9 +92,7 @@ const forms = document.querySelectorAll("form")
 
 const serverModal = document.querySelector(".serverModal")
 serverModal.style.display = "none"
-const closeServer = ()=> {
-    serverModal.style.display = "none"
-}
+
 
 const postData = (form) => {
     form.addEventListener("submit", (e) => {
@@ -121,12 +119,20 @@ const postData = (form) => {
                 const text = document.createElement("p")
                 text.innerText = "OK :)"
                 serverModal.append(text)
+                const closeServer = ()=> {
+                    serverModal.style.display = "none"
+                    text.remove()
+                }
                 setTimeout(closeServer, 2000)
             } else {
                 serverModal.style.display = "flex"
                 const text = document.createElement("p")
                 text.innerText = "not OK :("
                 serverModal.append(text)
+                const closeServer = ()=> {
+                    serverModal.style.display = "none"
+                    text.remove()
+                }
                 setTimeout(closeServer, 2000)
             }
         })
