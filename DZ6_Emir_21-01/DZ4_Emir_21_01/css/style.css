@@ -1,0 +1,23 @@
+button {
+    background: #d921fa;
+    color: white;
+    width: 80px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+* {
+    font-family: Bahnschrift;
+    line-height: 5px;
+    white-space: nowrap;
+}
+
+.delivery {
+    font-weight: 700;
+}
+
+.block {
+    display: flex;
+}
